@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>最適生産数計算</title>
+</head>
+<body>
+    <h2>最適生産数の計算</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">計算</button>
+    </form>
+
+    {% if result %}
+        <h3>計算結果</h3>
+        <p>最適な1日の生産数: <strong>{{ result.x_opt }}</strong> 個</p>
+        <p>1日の最大売上: <strong>{{ result.daily_revenue }}</strong> 円</p>
+        <p>月の売上: <strong>{{ result.monthly_revenue }}</strong> 円</p>
+    {% endif %}
+</body>
+</html>
+
+
