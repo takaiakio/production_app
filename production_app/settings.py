@@ -27,7 +27,7 @@ DEBUG = True
 
 import os
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = os.getenv("production-app-9kvg.onrender.com", 'localhost', "127.0.0.1").split(",")
 
 
 
